@@ -40,5 +40,5 @@ None
 ```
 
 ## Requirements
-Tensorflow
-Keras
+- Tensorflow
+- Keras
