@@ -1,9 +1,3 @@
-from tensorflow import keras
-from numpy import asarray
-import json
-
-Room = namedtuple('Room', 'type children has_portal')
-
 room_to_vector = {
     'Corridor':         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     'PrisonHall':       [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -20,6 +14,13 @@ room_to_vector = {
     'Start':            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
     'None':             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
 }
+
+from collections import namedtuple
+from tensorflow import keras
+from numpy import asarray
+import json
+
+Room = namedtuple('Room', 'type children has_portal')
 
 def get_room_from_line(line, current_stronghold_list):
     stuff = line.rstrip('\n').split(" ")
