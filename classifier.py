@@ -3,7 +3,6 @@ from keras.layers import Dense, Dropout, Flatten
 from keras.models import Sequential
 from keras.callbacks import CSVLogger
 from sklearn.model_selection import train_test_split
-from PIL import Image
 from numpy import asarray
 import os
 import json
